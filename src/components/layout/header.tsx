@@ -37,13 +37,13 @@ export function Header() {
 
       <Container size="wide">
         <nav className="flex items-center justify-between h-16 md:h-20" aria-label="Hoofdnavigatie">
-          <Link href="/" className="flex items-center gap-3 shrink-0" aria-label="Stichting Balanz - Home">
+          <Link href="/" className="group flex items-center gap-3 shrink-0" aria-label="Stichting Balanz - Home">
             <img
               src="/logo.svg"
               alt="Stichting Balanz Logo"
               width={48}
               height={48}
-              className="w-11 h-11 md:w-12 md:h-12 object-contain"
+              className="w-11 h-11 md:w-12 md:h-12 object-contain transition-transform duration-700 ease-out group-hover:rotate-[360deg]"
             />
             <div className="flex flex-col">
               <span className="text-lg font-bold text-secondary-dark leading-tight tracking-tight">Stichting Balanz</span>
