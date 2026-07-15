@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Scale, Heart, ShieldCheck, ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
+import { SoftBlobs } from "@/components/ui/decor";
 
 const services = [
   {
@@ -40,7 +41,8 @@ const services = [
 
 export function Services() {
   return (
-    <section className="relative py-16 md:py-24 bg-white noise-bg" id="diensten">
+    <section className="relative overflow-hidden py-16 md:py-24 bg-white noise-bg" id="diensten">
+      <SoftBlobs />
       <Container size="wide" className="relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

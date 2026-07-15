@@ -6,11 +6,12 @@ import { motion } from "framer-motion";
 import { ArrowRight, Phone, Shield, Users, Award, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
+import { SectionWave } from "@/components/ui/section-wave";
 import { siteConfig } from "@/lib/constants";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden py-20 md:py-28 lg:py-36 noise-bg">
+    <section className="relative overflow-hidden pb-28 pt-20 md:pb-36 md:pt-28 lg:pb-44 lg:pt-36 noise-bg">
       {/* Multi-layer gradient background */}
       <div className="absolute inset-0 gradient-hero" />
       <div className="absolute inset-0 mesh-gradient" />
@@ -28,7 +29,7 @@ export function Hero() {
       <div className="absolute bottom-32 right-[8%] w-4 h-4 bg-primary-200/40 rounded-full animate-float" />
       <div className="absolute top-20 left-[40%] w-1.5 h-1.5 bg-secondary/20 rounded-full animate-pulse-soft" />
 
-      <Container size="wide" className="relative">
+      <Container size="wide" className="relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -160,6 +161,8 @@ export function Hero() {
           </motion.div>
         </div>
       </Container>
+
+      <SectionWave position="bottom" className="text-white" />
     </section>
   );
 }

@@ -5,19 +5,22 @@ import { motion } from "framer-motion";
 import { Phone, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
+import { SectionWave } from "@/components/ui/section-wave";
 import { siteConfig } from "@/lib/constants";
 
 export function CTA() {
   return (
-    <section className="relative py-20 md:py-28 overflow-hidden bg-gradient-to-br from-secondary-dark via-secondary to-secondary-dark">
+    <section className="relative pb-20 pt-28 md:pb-28 md:pt-36 overflow-hidden bg-gradient-to-br from-secondary-dark via-secondary to-secondary-dark">
       {/* Decorative elements */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,_rgba(196,30,58,0.2),_transparent)]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_20%,_rgba(200,181,152,0.1),_transparent)]" />
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
       <div className="absolute -top-32 -right-32 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
       <div className="absolute -bottom-32 -left-32 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
-      
-      <Container size="narrow" className="relative">
+
+      <SectionWave position="top" className="text-white" />
+
+      <Container size="narrow" className="relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
