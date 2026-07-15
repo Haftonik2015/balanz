@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Container } from "@/components/ui/container";
+import { SectionWave } from "@/components/ui/section-wave";
 
 const stats = [
   { value: "12+", label: "Jaar ervaring" },
@@ -12,11 +13,15 @@ const stats = [
 
 export function Stats() {
   return (
-    <section className="relative py-20 overflow-hidden bg-gradient-to-r from-secondary-dark via-secondary to-secondary-dark">
+    <section className="relative py-28 md:py-32 overflow-hidden bg-gradient-to-r from-secondary-dark via-secondary to-secondary-dark">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(196,30,58,0.15),_transparent)]" />
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
-      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
-      <Container size="wide" className="relative">
+      <div className="absolute top-10 left-[12%] w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-pulse-soft" />
+      <div className="absolute bottom-6 right-[10%] w-72 h-72 bg-accent/[0.06] rounded-full blur-3xl animate-float" />
+
+      <SectionWave position="top" className="text-white" />
+      <SectionWave position="bottom" className="text-background-secondary" flip />
+
+      <Container size="wide" className="relative z-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <motion.div

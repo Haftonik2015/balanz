@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
 import { Container } from "@/components/ui/container";
+import { SectionWave } from "@/components/ui/section-wave";
 
 const testimonials = [
   {
@@ -30,10 +31,13 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="relative py-16 md:py-24 bg-white overflow-hidden noise-bg">
+    <section className="relative pb-16 pt-28 md:pb-24 md:pt-32 bg-white overflow-hidden noise-bg">
       <div className="absolute inset-0 mesh-gradient" />
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary-50/50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
       <div className="absolute bottom-0 left-0 w-72 h-72 bg-accent-light/20 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4" />
+
+      <SectionWave position="top" className="text-background-secondary" />
+
       <Container size="wide" className="relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
