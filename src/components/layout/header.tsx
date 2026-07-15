@@ -43,7 +43,7 @@ export function Header() {
               alt="Stichting Balanz Logo"
               width={48}
               height={48}
-              className="w-11 h-11 md:w-12 md:h-12 object-contain transition-transform duration-700 ease-out group-hover:rotate-[360deg]"
+              className="w-11 h-11 md:w-12 md:h-12 object-contain animate-logo-spin"
             />
             <div className="flex flex-col">
               <span className="text-lg font-bold text-secondary-dark leading-tight tracking-tight">Stichting Balanz</span>

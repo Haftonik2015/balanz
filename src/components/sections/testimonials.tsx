@@ -55,6 +55,15 @@ export function Testimonials() {
           <p className="text-lg text-foreground-muted">
             Het vertrouwen van onze cliënten is ons grootste compliment.
           </p>
+          <div className="mt-6 inline-flex items-center gap-3 rounded-full border border-card-border bg-white px-5 py-2.5 shadow-sm">
+            <div className="flex gap-0.5">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <Star key={i} className="h-4 w-4 fill-primary text-primary" />
+              ))}
+            </div>
+            <span className="text-sm font-semibold text-secondary-dark">5,0 gemiddeld</span>
+            <span className="text-sm text-foreground-muted">op basis van cliëntervaringen</span>
+          </div>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

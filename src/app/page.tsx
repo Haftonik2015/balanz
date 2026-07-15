@@ -4,6 +4,7 @@ import { Stats } from "@/components/sections/stats";
 import { Process } from "@/components/sections/process";
 import { Features } from "@/components/sections/features";
 import { Testimonials } from "@/components/sections/testimonials";
+import { FaqPreview } from "@/components/sections/faq-preview";
 import { CTA } from "@/components/sections/cta";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <Process />
       <Features />
       <Testimonials />
+      <FaqPreview />
       <CTA />
     </>
   );
