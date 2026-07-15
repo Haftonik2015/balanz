@@ -212,7 +212,17 @@ body {
   100% { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes logo-spin {
+  0%, 55% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 @layer utilities {
+  .animate-logo-spin {
+    animation: logo-spin 4.5s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+    transform-origin: center;
+    will-change: transform;
+  }
   .noise-bg {
     position: relative;
   }
